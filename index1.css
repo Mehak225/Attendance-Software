@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(admin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* //--------------------------- */
+#h1{
+    color: rgb(15, 14, 14);
+    margin-bottom: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.loginform{
+    width:min(450px,95%);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 450px;
+    margin-top: 80px;
+    background-color: rgb(137, 244, 237);
+    border: 1px solid rgb(50, 246, 207);
+    transition: all 0.4s ease;
+}
+.loginform:hover{
+    box-shadow: 0 0 15px 10px grey;
+}
+.inputgroup{
+    position: relative;
+    height: 50px;
+    width: 85%;
+}
+.inputgroup input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    transition: all 200ms;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.inputgroup label{
+    position: absolute;
+    transition: all 200ms;
+    color: black;
+}
+.inputgroup input:hover +label,
+.inputgroup input:focus +label,
+.inputgroup input:valid +label{
+    transform: translateY(-20px);
+    color: blue;
+}
+.inputgroup input:hover,
+.inputgroup input:focus,
+.inputgroup input:valid{
+border-bottom: 1px solid blue;
+}
+.topmargin{
+    margin-top: 50px;
+}
+.topmarginlarge{
+    margin-top: 80px;
+}
+.divcallforaction{
+    width: 85%;
+    height: 45px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btnlogin{
+    border: 1px solid black;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btnlogin:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    color: rgb(252, 252, 252);
+    background-color: black;
+}
+#span1{
+    color: #03f5e5;
+    font-family: Petit Formal Script;
+    font-size: 50px;
+}
+#span2{
+    font-family: Sansita Swashed;
+    color: #050505;
+    font-size: 30px;
+}
+hr{
+    border: 1px solid rgb(208, 226, 43);
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: transparent;
+    box-shadow: 0 5px 15px rgba(150, 137, 137, 0.653); 
+    position: sticky;
+}
+li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+    color: #080808;
+    transition:all 0.3s ease;
+}
+li a:hover,
+li a.active{
+    color:#f2f4f5;
+}
+li a.active::after,
+li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+ul{
+    background-color: transparent;
+    width: 13%;
+    height: 100%;
+    position: fixed;
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul li {
+    list-style: none;
+    padding-bottom: 90px;
+    font-size: 15px;
+}
+ul li a{
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+}
+ul li a:hover,
+ul li a.active{
+    color:rgb(252, 254, 255);
+    text-decoration: underline;
+}
+/* --------------form------------------ */
+#student{
+    color: rgb(252, 250, 250);
+    background: linear-gradient(rgb(188, 167, 171),grey,rgb(1, 1, 1));
+    width: 430px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    width:min(470px,95%);
+    margin-left: 503px;
+    height: 510px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgb(43, 40, 40);
+    box-shadow: 0 0 10px 0px grey;
+    display: none;
+}
+input{
+    position: relative;
+    height: 25px;
+    width: 250px;
+    margin: 7px;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#fname{
+    margin-right: 290px;
+    color: #0b0b0b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#class{
+    margin-right: 355px;
+    color: #0a0a0a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#no{
+    margin-right: 310px;
+    color: #0a0a0a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#year{
+    margin-right: 370px;
+    color: #0a0a0a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button{
+    border: 1px solid rgb(251, 248, 248);
+    width: 180px;
+    height: 65px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 9px;
+    background-color: #080808;
+    color: white;
+}
+button:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    color: rgb(5, 5, 5);
+    border-color: #f2f4f5;
+    background-color: skyblue;
+}
+/* //-------------list----------------// */
+.body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 510px;
+    display: none;
+    margin-left: 300px;
+}
+.container {
+    text-align: center;
+}
+h2{
+    color: #080808;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 24px;
+    margin-left: 280px;
+}
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0px grey;
+}
+thead {
+    background-color: #f0f0f0;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    font-weight: bold;
+}
+#admin-student-list{
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+/* ------------attendence--------- */
+.admin-attendence{
+    display: none;
+    margin-left: 200px;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+h3{
+    margin-top: 80px;
+    margin-left: 410px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+th {
+    background-color: #f0f0f0;
+}
+th, td:nth-child(1) {
+    text-align: center;
+}
+#attendence-table {
+    padding: 10px 15px;
+    background-color: #f8f8f9;
+    color: rgb(8, 8, 8);
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    height: 50px;
+    transition: 0.5s;
+    margin-left: 380px;
+    margin-bottom: 20px;
+}
+#attendence-table:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    background-color: #080808;
+    color: white;
+}
+#refreshTableButton {
+    padding: 10px 15px;
+    background-color: #f8f8f9;
+    color: rgb(8, 8, 8);
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    height: 50px;
+    transition: 0.5s;
+    margin-left: 380px;
+    margin-bottom: 20px;
+}
+#refreshTableButton:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    background-color: #080808;
+    color: white;
+}

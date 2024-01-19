@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background-image: url(user.jpg);
+    background-repeat: no-repeat;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #f7fdfd;
+    box-shadow: 0 5px 15px rgba(150, 137, 137, 0.653); 
+    z-index: 999;
+    height: 70px;
+    width: 1286px;
+    position: sticky;
+}
+/* --------------------------- */
+#teacher{
+    color: rgb(15, 14, 14);
+    margin-bottom: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.loginform{
+    width:min(450px,95%);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 450px;
+    margin-top: 80px;
+    background-color: rgb(137, 244, 237);
+    border: 1px solid rgb(50, 246, 207);
+    transition: all 0.4s ease;
+}
+.loginform:hover{
+    box-shadow: 0 0 15px 10px grey;
+}
+.inputgroup{
+    position: relative;
+    height: 50px;
+    width: 85%;
+}
+.inputgroup input{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    transition: all 200ms;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.inputgroup label{
+    position: absolute;
+    transition: all 200ms;
+    color: black;
+}
+.inputgroup input:hover +label,
+.inputgroup input:focus +label,
+.inputgroup input:valid +label{
+    transform: translateY(-20px);
+    color: blue;
+}
+.inputgroup input:hover,
+.inputgroup input:focus,
+.inputgroup input:valid{
+border-bottom: 1px solid blue;
+}
+.topmargin{
+    margin-top: 50px;
+}
+.topmarginlarge{
+    margin-top: 80px;
+}
+.divcallforaction{
+    width: 85%;
+    height: 45px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btnlogin{
+    border: 1px solid black;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btnlogin:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    color: rgb(252, 252, 252);
+    background-color: black;
+}
+#span1{
+    font-size: 80px;
+    margin-left: 250px;
+    color: #faf5f5;
+    font-family: Fontdiner Swanky;
+}
+#span2{
+    font-family: Cherry Cream Soda;
+    font-size: 90px;
+    margin-left: 500px;
+}
+#span3{
+    font-size: 110px;
+    margin-left: 650px;
+    color: #faf5f5;
+    font-family: Fontdiner Swanky;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b0b0b;
+    transition:all 0.5s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #159e95;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #159e95;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#navbar.active{
+    right: -300px;
+}
+#mobile{
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+#close{
+    display: none;
+}
+/* ----------------list------------------- */
+.body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 510px;
+    display: none;
+}
+.container {
+    text-align: center;
+    margin-top: 76px;
+}
+h2{
+    color: #080808;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 60px;
+    margin-top: 14px;
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0px grey;
+}
+thead {
+    background-color: #f0f0f0;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 18px;
+    text-align: left;
+}
+th {
+    font-weight: bold;
+}
+#user-student-list{
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+/* //------------attendence-----------// */
+body {
+    font-family: Arial, sans-serif;
+}
+#attendance{
+    display: none;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+#atten{
+    margin-top: 80px;
+    margin-left: 490px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+th {
+    background-color: #f0f0f0;
+}
+
+th, td:nth-child(1) {
+    text-align: left;
+}
+#markAttendance {
+    padding: 10px 15px;
+    background-color: #f8f8f9;
+    color: rgb(8, 8, 8);
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    height: 50px;
+    transition: 0.5s;
+    margin-left: 520px;
+    margin-bottom: 20px;
+}
+#markAttendance:hover{
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgb(11, 2, 4);
+    background-color: #080808;
+    color: white;
+}
+
